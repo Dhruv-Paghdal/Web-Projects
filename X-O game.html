@@ -1,0 +1,502 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="X-O_STYLESHEET .css">
+        <script>
+            var u1,u2;
+            var a,b,c,d,e,f,g,h,i,j,k;
+            function result()
+            {
+                if(u1=="X")
+                {
+                    if( ( (a+b+c == 3)|| (d+e+f == 3) || (g+h+i == 3) || (a+d+g == 3) || (b+e+h == 3) ) || ( (c+f+i == 3) || (a+e+i == 3)|| (c+e+g == 3)  ) )
+                    {
+                        document.getElementById("result").value=j+" Wins";
+                        return false;
+                    }
+                }
+                
+                if(u1=="O")
+                {
+                    if( ( (a+b+c == 6)|| (d+e+f == 6) || (g+h+i == 6) || (a+d+g ==6) || (b+e+h == 6) ) || ( (c+f+i == 6) || (a+e+i ==6)|| (c+e+g == 6)  ) )
+                    {
+                        document.getElementById("result").value=j+" Wins";
+                        return false;
+                    }
+                }
+
+                if(u2=="X")
+                {
+                    if( ( (a+b+c == 3)|| (d+e+f == 3) || (g+h+i == 3) || (a+d+g == 3) || (b+e+h == 3) ) || ( (c+f+i == 3) || (a+e+i == 3)|| (c+e+g == 3)  ) )
+                    {
+                        document.getElementById("result").value=k+" Wins";
+                        return false;
+                    }
+                }
+
+                if(u2=="O")
+                {
+                    if( ( (a+b+c == 6)|| (d+e+f == 6) || (g+h+i == 6) || (a+d+g ==6) || (b+e+h == 6) ) || ( (c+f+i == 6) || (a+e+i ==6)|| (c+e+g == 6)  ) )
+                    {
+                        document.getElementById("result").value=k+" Wins";
+                        return false;
+                    }
+                }
+            }
+            function valid(value,coloum)
+            {
+                // USER 1 TURN START
+                if(document.getElementById("turn2").disabled==true)
+                {
+                    if(value=="1")
+                    {
+                        document.getElementById("turn1").disabled=true;
+                        document.getElementById("turn2").disabled=false;
+                        if(u1=="X")
+                        {
+                            document.getElementById("c1").innerHTML="X";
+                            document.getElementById("c1").disabled=true;   
+                            a=1;
+                        }
+                        else 
+                        {
+                            document.getElementById("c1").innerHTML="O";
+                            document.getElementById("c1").disabled=true;
+                            a=2;
+                        }
+                    }
+                    if(value=="2")
+                    {
+                        document.getElementById("turn1").disabled=true;
+                        document.getElementById("turn2").disabled=false;
+                        if(u1=="X")
+                        {
+                            document.getElementById("c2").innerHTML="X";
+                            document.getElementById("c2").disabled=true;
+                            b=1;   
+                        }
+                        else 
+                        {
+                            document.getElementById("c2").innerHTML="O";
+                            document.getElementById("c2").disabled=true;
+                            b=2;
+                        }
+                    }
+                    if(value=="3")
+                    {
+                        document.getElementById("turn1").disabled=true;
+                        document.getElementById("turn2").disabled=false;
+                        if(u1=="X")
+                        {
+                            document.getElementById("c3").innerHTML="X"; 
+                            document.getElementById("c3").disabled=true; 
+                            c=1; 
+                        }
+                        else 
+                        {
+                            document.getElementById("c3").innerHTML="O";
+                            document.getElementById("c3").disabled=true;
+                            c=2;
+                        }
+                    }
+                    if(value=="4")
+                    {
+                        document.getElementById("turn1").disabled=true;
+                        document.getElementById("turn2").disabled=false;
+                        if(u1=="X")
+                        {
+                            document.getElementById("c4").innerHTML="X";
+                            document.getElementById("c4").disabled=true;
+
+                            d=1;   
+                        }
+                        else 
+                        {
+                            document.getElementById("c4").innerHTML="O";
+                            document.getElementById("c4").disabled=true;
+                            d=2;
+                        }
+                    }
+                    if(value=="5")
+                    {
+                        document.getElementById("turn1").disabled=true;
+                        document.getElementById("turn2").disabled=false;
+                        if(u1=="X")
+                        {
+                            document.getElementById("c5").innerHTML="X";   
+                            document.getElementById("c5").disabled=true;
+                            e=1;
+                        }
+                        else
+                        {
+                            document.getElementById("c5").innerHTML="O";
+                            document.getElementById("c5").disabled=true;
+                            e=2;
+                        }
+                    }
+                    if(value=="6")
+                    {
+                        document.getElementById("turn1").disabled=true;
+                        document.getElementById("turn2").disabled=false;
+                        if(u1=="X")
+                        {
+                            document.getElementById("c6").innerHTML="X";   
+                            document.getElementById("c6").disabled=true;
+                            f=1;
+                        }
+                        else
+                        {
+                            document.getElementById("c6").innerHTML="O";
+                            document.getElementById("c6").disabled=true;
+                            f=2;
+                        }
+                    }
+                    if(value=="7")
+                    {
+                        document.getElementById("turn1").disabled=true;
+                        document.getElementById("turn2").disabled=false;
+                        if(u1=="X")
+                        {
+                            document.getElementById("c7").innerHTML="X";  
+                            document.getElementById("c7").disabled=true; 
+                            g=1;
+                        }
+                        else
+                        {
+                            document.getElementById("c7").innerHTML="O";
+                            document.getElementById("c7").disabled=true;
+                            g=2;
+                        }
+                    }
+                    if(value=="8")
+                    {
+                        document.getElementById("turn1").disabled=true;
+                        document.getElementById("turn2").disabled=false;
+                        if(u1=="X")
+                        {
+                            document.getElementById("c8").innerHTML="X"; 
+                            document.getElementById("c8").disabled=true; 
+                            h=1; 
+                        }
+                        else
+                        {
+                            document.getElementById("c8").innerHTML="O";
+                            document.getElementById("c8").disabled=true;
+                            h=2;
+                        }
+                    }
+                    if(value=="9")
+                    {
+                        document.getElementById("turn1").disabled=true;
+                        document.getElementById("turn2").disabled=false;
+                        if(u1=="X")
+                        {
+                            document.getElementById("c9").innerHTML="X";  
+                            document.getElementById("c9").disabled=true;
+                            i=1; 
+                        }
+                        else
+                        {
+                            document.getElementById("c9").innerHTML="O";
+                            document.getElementById("c9").disabled=true;
+                            i=2;
+                        }
+                    }    
+                }
+                // USER 2 TURN START
+                else if(document.getElementById("turn1").disabled==true)
+                {
+                    if(value=="1")
+                    {
+                        document.getElementById("turn2").disabled=true;
+                        document.getElementById("turn1").disabled=false;
+                        if(u2=="X")
+                        {
+                            document.getElementById("c1").innerHTML="X";
+                            document.getElementById("c1").disabled=true;
+                            a=1;   
+                        }
+                        else
+                        {
+                            document.getElementById("c1").innerHTML="O";
+                            document.getElementById("c1").disabled=true;
+                            a=2;
+                        }
+                    }
+                    if(value=="2")
+                    {
+                        document.getElementById("turn2").disabled=true;
+                        document.getElementById("turn1").disabled=false;
+                        if(u2=="X")
+                        {
+                            document.getElementById("c2").innerHTML="X";  
+                            document.getElementById("c2").disabled=true; 
+                            b=1;
+                        }
+                        else
+                        {
+                            document.getElementById("c2").innerHTML="O";
+                            document.getElementById("c2").disabled=true;
+                            b=2;
+                        }
+                    }
+                    if(value=="3")
+                    {
+                        document.getElementById("turn2").disabled=true;
+                        document.getElementById("turn1").disabled=false;
+                        if(u2=="X")
+                        {
+                            document.getElementById("c3").innerHTML="X"; 
+                            document.getElementById("c3").disabled=true;
+                            c=1;  
+                        }
+                        else
+                        {
+                            document.getElementById("c3").innerHTML="O";
+                            document.getElementById("c3").disabled=true;
+                            c=2;
+                        }
+                    }
+                    if(value=="4")
+                    {
+                        document.getElementById("turn2").disabled=true;
+                        document.getElementById("turn1").disabled=false;
+                        if(u2=="X")
+                        {
+                            document.getElementById("c4").innerHTML="X"; 
+                            document.getElementById("c4").disabled=true;  
+                            d=1;
+                        }
+                        else
+                        {
+                            document.getElementById("c4").innerHTML="O";
+                            document.getElementById("c4").disabled=true;
+                            d=2;
+                        }
+                    }
+                    if(value=="5")
+                    {
+                        document.getElementById("turn2").disabled=true;
+                        document.getElementById("turn1").disabled=false;
+                        if(u2=="X")
+                        {
+                            document.getElementById("c5").innerHTML="X";
+                            document.getElementById("c5").disabled=true;
+                            e=1;   
+                        }
+                        else
+                        {
+                            document.getElementById("c5").innerHTML="O";
+                            document.getElementById("c5").disabled=true;
+                            e=2;
+                        }
+                    }
+                    if(value=="6")
+                    {
+                        document.getElementById("turn2").disabled=true;
+                        document.getElementById("turn1").disabled=false;
+                        if(u2=="X")
+                        {
+                            document.getElementById("c6").innerHTML="X"; 
+                            document.getElementById("c6").disabled=true;
+                            f=1;  
+                        }
+                        else
+                        {
+                            document.getElementById("c6").innerHTML="O";
+                            document.getElementById("c6").disabled=true;
+                            f=2;
+                        }
+                    }
+                    if(value=="7")
+                    {
+                        document.getElementById("turn2").disabled=true;
+                        document.getElementById("turn1").disabled=false;
+                        if(u2=="X")
+                        {
+                            document.getElementById("c7").innerHTML="X";  
+                            document.getElementById("c7").disabled=true;
+                            g=1; 
+                        }
+                        else
+                        {
+                            document.getElementById("c7").innerHTML="O";
+                            document.getElementById("c7").disabled=true;
+                            g=2;
+                        }
+                    }
+                    if(value=="8")
+                    {
+                        document.getElementById("turn2").disabled=true;
+                        document.getElementById("turn1").disabled=false;
+                        if(u2=="X")
+                        {
+                            document.getElementById("c8").innerHTML="X"; 
+                            document.getElementById("c8").disabled=true;
+                            h=1;  
+                        }
+                        else
+                        {
+                            document.getElementById("c8").innerHTML="O";
+                            document.getElementById("c8").disabled=true;
+                            h=2;
+                        }
+                    }
+                    if(value=="9")
+                    {
+                        document.getElementById("turn2").disabled=true;
+                        document.getElementById("turn1").disabled=false;
+                        if(u2=="X")
+                        {
+                            document.getElementById("c9").innerHTML="X";
+                            document.getElementById("c9").disabled=true;
+                            i=1;   
+                        }
+                        else
+                        {
+                            document.getElementById("c9").innerHTML="O";
+                            document.getElementById("c9").disabled=true;
+                            i=2;
+                        }
+                    }    
+                }
+            }
+            function  select(value,us1,us2){
+                j=document.getElementById("user1").value;
+                k=document.getElementById("user2").value;
+                if(i=="" || j=="")
+                {
+                    document.getElementById("turn1").innerHTML="USER 1";
+                    document.getElementById("turn2").innerHTML="USER 2";
+                }
+                else
+                {
+                    document.getElementById("turn1").innerHTML=j;
+                    document.getElementById("turn2").innerHTML=k;
+                }
+            // CHOICE SELECTOR FOR O AND X
+            u1=us1;
+            u2=us2;
+            if(value=="1")
+            {
+                document.getElementById("turn2").disabled=true;
+                document.getElementById("b2").disabled=true;
+                document.getElementById("b3").disabled=true;
+            }
+            if(value=="2")
+            {
+                document.getElementById("turn2").disabled=true;
+                document.getElementById("b1").disabled=true;   
+                document.getElementById("b4").disabled=true;
+            }
+            if(value=="3")
+            {
+                document.getElementById("turn1").disabled=true;
+                document.getElementById("b1").disabled=true;
+                document.getElementById("b4").disabled=true;
+            }
+            if(value=="4")
+            {
+                document.getElementById("turn1").disabled=true;
+                document.getElementById("b2").disabled=true;   
+                document.getElementById("b3").disabled=true;
+            } 
+        }
+        </script>
+    </head>
+    <body>
+    <div align="center">
+        <div style="color: teal; padding: 3px; font-size: 40px; font-weight: bold;">X-O Game</div>
+        <div class="tiles">
+            <button id="c1" onclick="valid(1,'c1');javscript:return result();">&nbsp;</button>
+            <button id="c2" onclick="valid(2,'c2');javscript:return result();">&nbsp;</button>
+            <button id="c3" onclick="valid(3,'c3');javscript:return result();">&nbsp;</button>
+            <br>
+            <div style="padding: 2px;"></div>
+            <button id="c4" onclick="valid(4,'c4');javscript:return result();">&nbsp;</button>
+            <button id="c5" onclick="valid(5,'c5');javscript:return result();">&nbsp;</button>
+            <button id="c6" onclick="valid(6,'c6');javscript:return result();">&nbsp;</button>
+            <br>
+            <div style="padding: 2px;"></div>
+            <button id="c7" onclick="valid(7,'c7');javscript:return result();">&nbsp;</button>
+            <button id="c8" onclick="valid(8,'c8');javscript:return result();">&nbsp;</button>
+            <button id="c9" onclick="valid(9,'c9');javscript:return result();">&nbsp;</button>
+            <br>
+        </div>
+        <div style="padding: 10px;"></div>
+        <div class="user" style="width: 500px;">
+            <input type="text" placeholder="User 1*" id="user1">
+            <input type="text" placeholder="User 2*" id="user2">
+        </div>
+        <div style="padding: 10px;"></div>
+        <div style="width: 425px;">
+            <div style="float: left;">
+                <button id="b1" value="O1" onclick="select(1,'O','X');">O</button>
+                <button id="b2" value="X1" onclick="select(2,'X','O');">X</button>
+            </div>
+            <div align="right">
+                <button id="b3" value="O2" onclick="select(3,'X','O');">O</button>
+                <button id="b4" value="X2" onclick="select(4,'O','X');">X</button>
+            </div>
+        </div>
+        <div style="padding: 10px;"></div>
+        <div style="width: 450px;">
+            <div style="font-size: 20px; color: black; float: left;">   
+                Turn Indicator
+            </div>
+            <div align="right">
+                <button id="turn1">User 1</button>
+                <button id="turn2">User 2</button>
+            </div>
+        </div>
+        <div style="padding: 10px;"></div>
+        <div>
+            <input type="text" id="result" placeholder="Winner Will Be Displayed Here">
+        </div>
+    </div>
+    <div style="padding: 26px;"></div>
+    <div style="color: whitesmoke;">&copy All right reserved. Designed By Dhruv Paghdal.</div>
+        <!-- <table align="center">
+        <div class="tiles">
+            <tr>
+                <td class="rows" style="border-right: solid 10px crimson;border-bottom: solid 10px crimson"><button id="c1" onclick="valid(1,'c1');"></button></td>
+                <td class="rows"><button id="c2" onclick="valid(2,'c2');"></button></td>
+                <td class="rows"><button id="c3" onclick="valid(3,'c3');"></button></td>
+            </tr>
+            <tr>
+                <td class="rows"><button id="c4" onclick="valid(4,'c4');"></button></td>
+                <td class="rows"><button id="c5" onclick="valid(5,'c5');"></button></td>
+                <td class="rows"><button id="c6" onclick="valid(6,'c6');"></button></td>
+            </tr>
+            <tr>
+                <td class="rows"><button id="c7" onclick="valid(7,'c7');"></button></td>
+                <td class="rows"><button id="c8" onclick="valid(8,'c8');"></button></td>
+                <td class="rows"><button id="c9" onclick="valid(9,'c9');"></button></td>
+            </tr>
+        </div>
+            <tr></tr>
+            <tr>
+                <td colspan="3">
+                    <input type="text" placeholder="User 1*" id="user1"> 
+                    <input type="text" placeholder="User 2*" id="user2">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3"> 
+                    <button id="b1" value="O1" onclick="select(1,'O','X');">O</button>
+                    <button id="b2" value="X1" onclick="select(2,'X','O');">X</button>
+                    <button id="b3" value="O2" onclick="select(3,'X','O');">O</button>
+                    <button id="b4" value="X2" onclick="select(4,'O','X');">X</button>
+                </td>
+            </tr>
+            <tr>
+                <td>Trun Indicator</td>
+                <td><button id="turn1">User 1*</button></td>
+                <td><button id="turn2">User 2*</button></td>
+            </tr>
+            <tr>
+                <td colspan="3"><input type="text"  id="result" placeholder="Winner Will Be Displayed Here"></td>
+            </tr>
+        </table> -->
+        
+    </body>
+</html>

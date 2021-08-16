@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylish Clock</title>
+    <script type="text/javascript">
+    function time() {
+        d = new Date();
+        hr = d.getHours();
+        min = d.getMinutes();
+        sec = d.getSeconds();
+        date = d.getDate();
+        month = d.getMonth();
+        year = d.getFullYear();
+        day = d.getDay();
+        ran=":";
+
+        if (hr > 12) {
+          document.getElementById("time").innerHTML = (hr - 12) + ran + min + ran + sec + "PM";
+        } else {
+          document.getElementById("time").innerHTML = hr + ran + min + ran + sec + "AM";
+        }
+        document.getElementById("date").innerHTML= date + "/" + (month + 1) + "/" + year;
+        if (day == 0) {
+            document.getElementById("day").innerHTML = "SUNDAY";
+        } else if (day == 1) {
+            document.getElementById("day").innerHTML = "MONDAY";
+        } else if (day == 2) {
+            document.getElementById("day").innerHTML = "TUESDAY";
+        } else if (day == 3) {
+            document.getElementById("day").innerHTML = "WEDNESDAY";
+        } else if (day == 4) {
+            document.getElementById("day").innerHTML = "THURSDAY";
+        } else if (day == 5) {
+            document.getElementById("day").innerHTML = "FRIDAY";
+        } else if (day == 6) {
+            document.getElementById("day").innerHTML = "SATURDAY";
+        }
+      }
+
+      function start() {
+        setInterval("time()", 1000);
+      }
+    </script>
+    <style>
+        body{
+            background: #2c2f3b;
+            font-family:'Inconsolata',monospace;
+            margin-top: 170px ;
+            display: grid;
+            place-items: center;
+        }
+        .title{
+            width: 255px;
+            color: cyan;
+            padding-left: 15px;
+            padding-bottom: 7px;
+            border-left: #04d9ff 10px dotted;
+            border-right: #04d9ff 10px dotted;
+            animation: change 4.15s infinite ease-in-out;
+        }
+        .container1{
+            height:250px;
+            width:250px;
+            border: 10px solid #04d9ff;
+            border-radius: 150px;
+            position: relative; 
+            background-color: rgb(36, 37, 51);
+            box-shadow: 0px 0px 30px #04d9ff;
+            animation-name: change;
+            animation-duration: 4.15s;
+            animation-iteration-count: infinite;
+        }
+        .container2{
+            height: 86px;
+            width: 151px;
+            padding: 22.75px;
+            padding-left: 49px;
+            align-content: center;
+            justify-content: center;
+            position: absolute;
+        }
+        #time{
+            color: #fff;
+            font-size: 30px;
+            text-align: center;
+        }
+        #date{
+            color: lightgray;
+            font-size: 15px;
+            text-align: center;
+        }
+        #day{
+            color: lightgray;
+            font-size: 15px;
+            text-align: center;
+        }
+        .sty{
+            height: 5px;
+            width: 70px;
+            background-color: teal;
+            animation: s 4.15s infinite linear;
+        }
+        .sty1{
+            height: 5px;
+            width: 50px;
+            background-color: teal;
+            animation: s 4.15s infinite linear;
+        }
+        .sty2{
+            height: 5px;                                    
+            width: 30px;
+            background-color: teal;
+            animation: s 4.15s infinite linear;
+        }
+        .sty3{
+            height: 5px;
+            width: 10px;
+            background-color: teal;
+            animation: s 4.15s infinite linear;
+        }
+        @keyframes change {
+            0%{border-color:  #04d9ff;}
+            50%{border-color:  transparent;}
+            100%{border-color:  #04d9ff;}
+        }
+        @keyframes s{
+            0%{background-color: #04d9ff;}
+            50%{background-color: transparent;}
+            100%{background-color: #04d9ff;}
+        }
+    </style>
+</head>
+
+<body onload="start()">
+    <div class="container1">
+        <div class="container2">
+            <div align='center'>
+                <div class="sty3"></div>
+                <div style="padding: 5px;"></div>
+                <div class="sty2"></div>
+                <div style="padding: 5px;"></div>
+                <div class="sty1"></div>
+                <div style="padding: 5px;"></div>
+                <div class="sty"></div>
+            </div>
+            <div style="padding: 5px;"></div>
+            <div id="time"></div>
+            <div style="padding: 3px;"></div>
+            <div id="date"></div>
+            <div style="padding: 3px;"></div>
+            <div id="day"></div>
+            <div style="padding: 5px;"></div>
+            <div align='center'>
+                <div class="sty"></div>
+                <div style="padding: 5px;"></div>
+                <div class="sty1"></div>
+                <div style="padding: 5px;"></div>
+                <div class="sty2"></div>
+                <div style="padding: 5px;"></div>
+                <div class="sty3"></div>
+            </div>
+        </div>
+    </div>
+    <div style="padding: 30px;"></div>
+    <footer class="title" >&copy; Designed By Dhruv Paghdal.</footer>
+</body>
+</html>
